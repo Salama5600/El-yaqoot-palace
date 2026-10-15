@@ -1,0 +1,6 @@
+{
+  "name": "قصر الياقوت | Al-Yaqoot Palace",
+  "description": "تجربة حجز فاخرة لمطعم قصر الياقوت بمفهوم الفخامة الهادئة (Soft Luxury) مع طلب مسبق للأطباق وتذكرة حجز رقمية فورية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

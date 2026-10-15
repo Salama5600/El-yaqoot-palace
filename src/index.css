@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #FDFBF7;
+    --color-warm-beige: #EFEBE4;
+    --color-ruby: #7A3036;
+    --color-ruby-hover: #63242A;
+    --color-gold: #C5A059;
+    --color-charcoal: #2C2A29;
+    --color-subtle-border: #E5DCD0;
+    --color-soft-tab: #F4EFE6;
+    --color-disabled: #D8CFC4;
+  }
+
+  body {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    background-color: #FDFBF7;
+    color: #2C2A29;
+    scroll-behavior: smooth;
+  }
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Soft Luxury Shadows */
+.shadow-soft-subtle {
+  box-shadow: 0px 4px 12px rgba(44, 42, 41, 0.05);
+}
+
+.shadow-soft-float {
+  box-shadow: 0px 12px 30px rgba(44, 42, 41, 0.08);
+}
+
+.shadow-pass {
+  box-shadow: 0px 20px 40px -10px rgba(122, 48, 54, 0.12), 0px 0px 1px 1px rgba(197, 160, 89, 0.3);
+}
+
+/* Glassmorphism */
+.glass-ivory {
+  background: rgba(253, 251, 247, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-modal {
+  background: rgba(253, 251, 247, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Primary CTA Button specification from PDF:
+   - Default: bg #7A3036, white text, smooth border, radius 8px, height 48px/40px/32px
+   - Hover: #63242A (-10% lightness) with translateY(-1px)
+   - Active: scale(0.97)
+   - Disabled: #D8CFC4 with not-allowed
+*/
+.btn-ruby-primary {
+  background-color: #7A3036;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0px 4px 12px rgba(122, 48, 54, 0.18);
+}
+.btn-ruby-primary:hover:not(:disabled) {
+  background-color: #63242A;
+  transform: translateY(-1px);
+  box-shadow: 0px 6px 16px rgba(122, 48, 54, 0.25);
+}
+.btn-ruby-primary:active:not(:disabled) {
+  transform: scale(0.97);
+}
+.btn-ruby-primary:disabled {
+  background-color: #D8CFC4;
+  color: #8C827A;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Gold dashed ticket border */
+.ticket-dashed-border {
+  border: 2px dashed #C5A059;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5DCD0;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
